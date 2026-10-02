@@ -1,0 +1,155 @@
+/* ==============================
+   INMOBILIARIA DINGIANDI - FINAL
+   ============================== */
+:root{
+    --primary: #184588;
+    --secondary: #3780ed;
+    --accent: #ed7e38;
+    --bg: #f4f6fb;
+    --white: #ffffff;
+    --text: #1f2937;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior: smooth;}
+body{font-family:"Libertinus Serif",serif;background:var(--bg);color:var(--text);line-height:1.6}
+
+/* NAVBAR */
+.navbar-dingiandi{
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(24,69,136,0.08);
+    padding: 12px 0;
+}
+.logo-header{ height: 50px; width: auto; object-fit: contain; }
+.mi-titulo{color:var(--primary);font-size:1.6rem;font-weight:700;letter-spacing:1px}
+.navbar-dingiandi .nav-link{color:var(--primary);font-weight:700;font-size:0.9rem;padding:8px 14px!important;border-radius:6px;transition:0.2s}
+.navbar-dingiandi .nav-link:hover{background:var(--primary);color:var(--white)!important}
+.btn-nav-contacto{background:var(--primary);color:var(--white)!important;border-radius:20px!important;padding:8px 20px!important}
+.btn-nav-contacto:hover{background:var(--secondary)!important}
+.navbar-toggler{border:none}
+.navbar-toggler:focus{box-shadow:none}
+
+/* HERO */
+.hero{
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background-image: url('imagenes/hero.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(15, 40, 70, 0.75), rgba(15, 40, 70, 0.65));
+}
+.hero-texto{ position: relative; z-index: 1; max-width: 800px; color: white; }
+.btn-hero{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 32px;
+    background: #ff6a00;
+    color: white !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 2px solid #ff6a00;
+    transition: all 0.3s ease;
+}
+.btn-hero:hover{ background: #e65e00; border-color: #e65e00; transform: translateY(-2px); }
+
+/* SECCIONES */
+.secciones-tarjetas{padding:70px 5%;text-align:center}
+.secciones-tarjetas h2{color:var(--primary);font-size:2.2rem; text-transform: uppercase; font-weight:800;}
+.secciones-tarjetas p{text-align:center;}
+.bg-claro{background:var(--white)}
+.contenedor-tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px;margin-top:35px;text-align:left}
+.tarjetas{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(24,69,136,0.08);border:1px solid #e8eefb;display:flex;flex-direction:column;transition:0.3s}
+.bg-claro .tarjetas{background:var(--bg)}
+.tarjetas:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(24,69,136,0.15)}
+.tarjetas img{width:100%;height:210px;object-fit:cover}
+.tarjetas h3{padding:14px 18px 0 18px;color:var(--primary);font-size:1.15rem}
+.tarjetas p{padding:6px 18px;color:#5b6b82;font-size:0.95rem;flex-grow:1; text-align:left;}
+.tag{align-self:flex-start;background:var(--secondary);color:var(--white);font-size:0.7rem;font-weight:700;padding:5px 12px;border-radius:20px;margin:14px 0 0 18px}
+.btn-card{align-self:flex-start;background:var(--primary);color:var(--white);padding:9px 16px;border-radius:6px;text-decoration:none;margin:14px 18px 18px 18px;font-size:0.85rem;font-weight:700;display:inline-flex;transition:0.2s}
+.btn-card:hover{background:var(--secondary)}
+
+/* MAPA - CORREGIDO */
+.mapa-container{
+    max-width: 750px;
+    margin: 35px auto 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 4px solid white;
+}
+.mapa-container iframe{ display: block; width: 100%; }
+.mapa-boton-wrap{ text-align: center; margin-top: 30px; }
+.btn-mapa{
+    display: inline-block;
+    padding: 14px 32px;
+    background: #ff6a00;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.btn-mapa:hover{ background: var(--primary); transform: translateY(-2px); }
+
+/* FORM */
+.form-contacto{max-width:640px;margin:30px auto 0 auto;background:var(--white);padding:28px;border-radius:16px;box-shadow:0 8px 24px rgba(24,69,136,0.08);display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left}
+.form-contacto input,.form-contacto select,.form-contacto textarea{padding:13px;border:1.5px solid #dbe4f5;border-radius:8px;font-family:inherit;width:100%;font-size:1rem}
+.form-contacto textarea,.form-contacto button{grid-column:1/-1}
+.form-contacto input:focus,.form-contacto select:focus,.form-contacto textarea:focus{outline:none;border-color:var(--secondary)}
+
+/* FOOTER */
+footer{background:var(--primary);color:var(--white);padding:50px 5% 20px 5%}
+.contenedor-footer{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px}
+.lista-footer{display:flex;flex-direction:column;gap:10px}
+.lista-footer h3{color:var(--accent);font-size:1.1rem}
+.lista-footer ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.lista-footer ul li{opacity:0.9;font-size:0.95rem}
+.redes{color:var(--white);text-decoration:none;transition:0.2s}
+.redes:hover{color:var(--accent)}
+.copyright{display:flex;justify-content:center;margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);font-size:0.85rem;opacity:0.7}
+
+/* WHATSAPP FLOTANTE */
+.whatsapp-flotante{
+    position: fixed;
+    width: 62px;
+    height: 62px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+    text-decoration: none;
+    animation: pulse-wsp 2s infinite;
+    transition: all 0.3s ease;
+}
+@keyframes pulse-wsp { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+.whatsapp-flotante:hover{ background-color: #128C7E; transform: scale(1.1); }
+.whatsapp-icono{ width: 36px; height: 36px; }
+
+@media(max-width:900px){
+    .hero{min-height:520px;background-position:70% center;padding:0 6%;justify-content:center}
+    .hero-texto{align-items:center;text-align:center}
+    .btn-hero{align-self:center}
+    .form-contacto{grid-template-columns:1fr}
+    .mi-titulo{font-size:1.2rem}
+    .logo-header{height:40px}
+}
